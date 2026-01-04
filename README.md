@@ -19,6 +19,7 @@ A lightweight Python tool for overlaying an image on your screen at any position
 
 * Click-through capability.
 * Previews when hovering mouse cursor and waiting to set image position.
+* Allow alpha/opacity to be changed.
 * Scaling slider/input UI with image preview/dimensions.
 * More user-friendly UI, perhaps outside of ```cmd```.
 
