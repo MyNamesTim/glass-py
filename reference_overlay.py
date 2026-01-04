@@ -33,7 +33,22 @@ elif time.hour > 12:
     else:
         print("Good afternoon!")
 
-scale = float(input("What scale would you like the image to be? (0.00-1.00)"))
+while True:
+    scale = float(input("What scale would you like the image to be? 1.00 is the original image scale.\n"))
+    if scale < 0.0 or scale > 1.0:
+        scale_confirm = input(
+            "The scale that you have entered is abnormal and may lead to image reversing or a loss of detail (artifacts, pixelation, and blurring) due to upscaling.\n\n"
+            "Are you sure that you would like this scale? (Y/N)\n"
+        ).lower()
+        if scale_confirm == "n":
+            print("Okay, let's try again.")
+            continue
+        else:
+            print("Confirmed.")
+            break
+    else:
+        break
+
 print("Please select an image.")
 path = filedialog.askopenfilename(
         title="Select a file",
@@ -72,7 +87,7 @@ def setpos(event):
     t.geometry(f'{w}x{h}+{x}+{y}')
     t.attributes("-alpha", 1.0)
     t.unbind("<Button-1>")
-    print(f'Window positioned at {x}, {y}')
+    print(f'Reference positioned at {x}, {y}')
 
 t.bind("<Button-1>", setpos)
 t.mainloop()
