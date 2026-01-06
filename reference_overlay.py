@@ -49,6 +49,14 @@ while True:
     else:
         break
 
+while True:
+    alpha = float(input("Enter an opacity value from 0.00 - 1.00.\n"))
+    if alpha < 0.0 or alpha > 1.0:
+        print("The opacity value you entered is invalid. Please try again.")
+        continue
+    else:
+        break
+
 print("Please select an image.")
 path = filedialog.askopenfilename(
         title="Select a file",
@@ -85,11 +93,12 @@ print("Please set window position using left click.")
 def setpos(event):
     x, y = event.x_root, event.y_root
     t.geometry(f'{w}x{h}+{x}+{y}')
-    t.attributes("-alpha", 1.0)
+    t.attributes("-alpha", alpha)
     t.attributes("-topmost", True)
     t.unbind("<Button-1>")
     print(f'Reference positioned at {x}, {y}')
 
 t.bind("<Button-1>", setpos)
 t.mainloop()
+
 
