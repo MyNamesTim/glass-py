@@ -22,6 +22,7 @@ A lightweight Python tool for overlaying an image on your screen at any position
 * Scaling slider/input UI with image preview/dimensions.
 * More user-friendly UI, perhaps outside of ```cmd```.
 * Allow photos to be switched without closing and reopening the program.
+* Create configs to allow for default settings.
 
 ---
 
