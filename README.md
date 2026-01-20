@@ -38,8 +38,8 @@ A lightweight Python tool for overlaying an image on your screen at any position
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/mynamestim/reference-overlay-python.git
-cd reference-overlay-python
+git clone https://github.com/mynamestim/glass-py.git
+cd glass-py
 ```
 
 2. Install dependencies:
@@ -51,7 +51,7 @@ pip install pillow
 
 1. Run the Python script:
 ```bash
-python reference_overlay.py
+python src.py
 ```
 2. Enter desired scale.
 3. Select image from file viewer.
