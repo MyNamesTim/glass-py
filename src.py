@@ -125,3 +125,4 @@ def setpos(event):
 
 t.bind("<Button-1>", setpos)
 t.mainloop()
+
